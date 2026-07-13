@@ -8,7 +8,7 @@
 //!
 //! Cross-platform Rust global memory allocator using [rpmalloc](https://github.com/rampantpixels/rpmalloc).
 //!
-//! See the [rpmalloc README](https://github.com/mjansson/rpmalloc/blob/master/README.md) for a detailed description of how the allocator works, peforms, and compares with other allocators.
+//! See the [rpmalloc README](https://github.com/mjansson/rpmalloc/blob/master/README.md) for a detailed description of how the allocator works, performs, and compares with other allocators.
 //!
 //! ## How to use
 //!
@@ -85,7 +85,7 @@
     clippy::dbg_macro,
     clippy::debug_assert_with_mut_call,
     clippy::doc_markdown,
-    clippy::empty_enum,
+    clippy::empty_enums,
     clippy::enum_glob_use,
     clippy::exit,
     clippy::explicit_into_iter_loop,
@@ -102,7 +102,7 @@
     clippy::map_err_ignore,
     clippy::map_flatten,
     clippy::map_unwrap_or,
-    clippy::match_on_vec_items,
+    clippy::indexing_slicing,
     clippy::match_same_arms,
     clippy::match_wildcard_for_single_variants,
     clippy::mem_forget,
@@ -113,7 +113,7 @@
     clippy::rest_pat_in_fully_bound_structs,
     clippy::string_add_assign,
     clippy::string_add,
-    clippy::string_to_string,
+    clippy::implicit_clone,
     clippy::suboptimal_flops,
     clippy::todo,
     clippy::unimplemented,
