@@ -8,7 +8,7 @@
 //!
 //! Cross-platform Rust global memory allocator using [rpmalloc](https://github.com/rampantpixels/rpmalloc).
 //!
-//! See the [rpmalloc README](https://github.com/mjansson/rpmalloc/blob/master/README.md) for a detailed description of how the allocator works, peforms, and compares with other allocators.
+//! See the [rpmalloc README](https://github.com/mjansson/rpmalloc/blob/master/README.md) for a detailed description of how the allocator works, performs, and compares with other allocators.
 //!
 //! ## How to use
 //!
@@ -16,7 +16,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! rpmalloc = "0.2.0"
+//! rpmalloc = "0.3.0"
 //! ```
 //!
 //! And then in one of your `.rs` files:
@@ -30,14 +30,14 @@
 //!
 //! It is also possible to configure how the allocator should be built through a set of feature flags that correspond to the rpmalloc C library `ENABLE_x` defines:
 //!
-//! - Overall: `statistics`, `validate_args`, `asserts`, `guards`
-//! - Cache: `unlimited_cache`, `unlimited_global_cache`, `unlimited_thread_cache`, `global_cache`, `thread_cache`, `adaptive_thread_cache`
+//! - Turn on: `statistics`, `validate_args`, `asserts`, `leak_detection` (implies `statistics`)
+//! - Turn off: `disable_unmap`, `disable_decommit`
 //!
 //! Example usage:
 //!
 //! ```toml
 //! [dependencies]
-//! rpmalloc = { version = "0.1.0", features = ["guards", "statistics"] }
+//! rpmalloc = { version = "0.3.0", features = ["asserts", "statistics"] }
 //! ```
 //!
 //! See [rpmalloc README](https://github.com/mjansson/rpmalloc/blob/master/README.md) for detailed descriptions of the config options.
