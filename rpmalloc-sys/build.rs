@@ -44,6 +44,10 @@ fn main() {
             build = build.define("_GNU_SOURCE", "1");
             println!("cargo:rustc-link-lib=pthread");
         }
+        "windows" => {
+            // `rpmalloc_initialize()` asks for the lock pages privilege to enable huge pages
+            println!("cargo:rustc-link-lib=advapi32");
+        }
         "macos" => {
             build = build
                 .flag("-Wno-padded")
